@@ -62,12 +62,11 @@ export KEY_EXPIRE=3650
 # which will be placed in the certificate.
 # Don't leave any of these fields blank.
 export KEY_COUNTRY="US"
-export KEY_PROVINCE="NY"
-export KEY_CITY="New York City"
-export KEY_ORG="DigitalOcean"
-export KEY_EMAIL="admin@example.com"
-export KEY_OU="Community"
-
+export KEY_PROVINCE="CA"
+export KEY_CITY="SanFrancisco"
+export KEY_ORG="Fort-Funston"
+export KEY_EMAIL="me@myhost.mydomain"
+export KEY_OU="MyOrganizationalUnit"
 
 # X509 Subject Field
 export KEY_NAME="server"
