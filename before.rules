@@ -8,6 +8,15 @@
 #   ufw-before-forward
 #
 
+# START OPENVPN RULES
+# NAT table rules
+*nat
+:POSTROUTING ACCEPT [0:0]
+# Allow traffic from OpenVPN client to eth0
+-A PREROUTING -i eth0 -d serverip -p tcp -m multiport --dports 444:65535 -j DNAT --to-destination$
+-A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j MASQUERADE
+COMMIT
+# END OPENVPN RULES
 
 # Don't delete these required lines, otherwise there will be errors
 *filter
